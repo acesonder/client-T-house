@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo APP_NAME; ?> - Welcome</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="navbar-brand">
+                🏠 Shelter Management System
+            </a>
+            <button class="navbar-toggle" onclick="UI.toggleNavMenu()">☰</button>
+            <ul class="navbar-menu">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#updates">Updates</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="/public/login.php" class="btn btn-sm btn-outline">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" style="background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%); color: white; padding: 4rem 0; text-align: center;">
+        <div class="container">
+            <h1 style="font-size: 3rem; margin-bottom: 1rem;">Building Paths to Better Lives</h1>
+            <p style="font-size: 1.25rem; margin-bottom: 2rem; opacity: 0.9;">
+                Comprehensive support services to end homelessness and create lasting change
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="/public/login.php" class="btn btn-lg" style="background: white; color: #2563eb;">Client Portal</a>
+                <a href="#services" class="btn btn-lg btn-outline" style="border-color: white; color: white;">Our Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics -->
+    <section style="padding: 3rem 0; background: #f8fafc;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 text-center mb-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 style="color: #2563eb; margin-bottom: 0.5rem;">500+</h2>
+                            <p class="text-muted">Clients Served</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 text-center mb-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 style="color: #10b981; margin-bottom: 0.5rem;">85%</h2>
+                            <p class="text-muted">Success Rate</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 text-center mb-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 style="color: #f59e0b; margin-bottom: 0.5rem;">50+</h2>
+                            <p class="text-muted">Staff & Volunteers</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 text-center mb-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 style="color: #ef4444; margin-bottom: 0.5rem;">24/7</h2>
+                            <p class="text-muted">Support Available</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" style="padding: 3rem 0;">
+        <div class="container">
+            <h2 class="text-center mb-4">Our Services</h2>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-header">🏠 Housing Support</div>
+                        <div class="card-body">
+                            <p>Assistance finding safe, stable housing with support services to maintain independence.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-header">🏥 Health Services</div>
+                        <div class="card-body">
+                            <p>Mental health counseling, addiction treatment, and medical care coordination.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-header">📋 Case Management</div>
+                        <div class="card-body">
+                            <p>Personalized support plans to address your unique needs and goals.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-header">💼 Employment Help</div>
+                        <div class="card-body">
+                            <p>Job training, resume building, and employment placement assistance.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-header">⚖️ Legal Assistance</div>
+                        <div class="card-body">
+                            <p>Help with ID recovery, legal issues, and navigating government services.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-header">👨‍👩‍👧 Family Support</div>
+                        <div class="card-body">
+                            <p>Services for families and children, including childcare and education.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Updates & Bulletin -->
+    <section id="updates" style="padding: 3rem 0; background: #f8fafc;">
+        <div class="container">
+            <h2 class="text-center mb-4">Latest Updates</h2>
+            <div id="bulletin-container">
+                <div class="text-center">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" style="padding: 3rem 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>About Our Program</h2>
+                    <p>We are committed to ending homelessness through comprehensive, client-centered support services. Our approach addresses the root causes of homelessness including mental health, addiction, lack of housing, and systemic barriers.</p>
+                    <p>Our team of dedicated staff and volunteers work together to provide:</p>
+                    <ul>
+                        <li>Smart intake assessments that identify individual needs</li>
+                        <li>Automated coordination with service providers</li>
+                        <li>Ongoing case management and support</li>
+                        <li>Tools and resources for self-sufficiency</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h2>How We Help</h2>
+                    <div class="card mb-2">
+                        <div class="card-body">
+                            <h4>1. Assessment</h4>
+                            <p>Comprehensive evaluation of your needs and goals</p>
+                        </div>
+                    </div>
+                    <div class="card mb-2">
+                        <div class="card-body">
+                            <h4>2. Planning</h4>
+                            <p>Create a personalized plan with clear steps forward</p>
+                        </div>
+                    </div>
+                    <div class="card mb-2">
+                        <div class="card-body">
+                            <h4>3. Connection</h4>
+                            <p>Link you with the right services and resources</p>
+                        </div>
+                    </div>
+                    <div class="card mb-2">
+                        <div class="card-body">
+                            <h4>4. Support</h4>
+                            <p>Ongoing assistance as you work toward your goals</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="padding: 3rem 0; background: #f8fafc;">
+        <div class="container">
+            <h2 class="text-center mb-4">Get In Touch</h2>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4>Emergency Contact</h4>
+                            <p>📞 1-800-SHELTER (24/7 Hotline)</p>
+                            <p>📧 emergency@shelter.org</p>
+                            <p>📍 123 Support Street, City, Province</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4>Office Hours</h4>
+                            <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
+                            <p>Saturday: 10:00 AM - 4:00 PM</p>
+                            <p>Sunday: Emergency services only</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: #1e293b; color: white; padding: 2rem 0; text-align: center;">
+        <div class="container">
+            <p>&copy; 2024 Shelter Management System. All rights reserved.</p>
+            <p style="opacity: 0.7; font-size: 0.9rem;">
+                Building paths to better lives, one person at a time.
+            </p>
+        </div>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
+    <script>
+        // Load bulletin posts
+        document.addEventListener('DOMContentLoaded', function() {
+            Ajax.get('/api/bulletin.php?public=true', function(response) {
+                const container = document.getElementById('bulletin-container');
+                container.innerHTML = '';
+                
+                if (response.success && response.posts && response.posts.length > 0) {
+                    response.posts.forEach(function(post) {
+                        const card = document.createElement('div');
+                        card.className = 'card mb-2';
+                        
+                        let priorityBadge = '';
+                        if (post.priority === 'urgent') {
+                            priorityBadge = '<span class="badge badge-danger">Urgent</span>';
+                        } else if (post.priority === 'high') {
+                            priorityBadge = '<span class="badge badge-warning">High Priority</span>';
+                        }
+                        
+                        card.innerHTML = `
+                            <div class="card-header">
+                                ${Utils.escapeHtml(post.title)} ${priorityBadge}
+                            </div>
+                            <div class="card-body">
+                                <p>${Utils.escapeHtml(post.content)}</p>
+                                <p class="text-muted" style="font-size: 0.9rem;">
+                                    <span class="badge badge-info">${Utils.escapeHtml(post.post_type)}</span>
+                                    Posted: ${Utils.formatDate(post.publish_date)}
+                                </p>
+                            </div>
+                        `;
+                        
+                        container.appendChild(card);
+                    });
+                } else {
+                    container.innerHTML = '<p class="text-center text-muted">No updates at this time.</p>';
+                }
+            }, function() {
+                document.getElementById('bulletin-container').innerHTML = 
+                    '<p class="text-center text-muted">Unable to load updates.</p>';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+# Logs
+logs/
+*.log
+
+# Environment files
+.env
+.env.*
+config/config.local.php
+
+# Uploaded files
+assets/uploads/*
+!assets/uploads/.gitkeep
+
+# Dependencies
+vendor/
+node_modules/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.cache
+
+# Backup files
+*.bak
+*.backup
+*.sql
+*.sql.gz
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Build artifacts
+dist/
+build/
+
+# Sensitive data
+config/secrets.php
+*.pem
+*.key
+*.cert
